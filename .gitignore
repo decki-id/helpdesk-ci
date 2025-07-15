@@ -4,6 +4,7 @@ config.php
 database.php
 Auth.php
 Agent_model.php
+style-auth.css
 
 application/cache/*
 application/logs/*
