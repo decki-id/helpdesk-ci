@@ -21,6 +21,12 @@
 				<div class="card">
 					<div class="card-body">
 						<p class="card-text text-justify">
+							Hi there! Thank you so much for visiting this project of mine, which is actually very basic,
+							but I still wanted to deploy and put it along with the other projects on my website.<br>
+              Below is the background of the project which I hope you'll take the time to read.
+						</p>
+						<hr class="w-25">
+						<p class="card-text text-justify">
 							This was my thesis project back in college, developed between November 2019 - February 2020.
 							As indicated by the logo, the project was built using the CodeIgniter 3 PHP framework,
 							along with Bootstrap CSS framework, a pinch of JavaScript, and MySQL as the DBMS.<br>
