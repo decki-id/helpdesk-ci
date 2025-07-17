@@ -1,4 +1,4 @@
-FROM php:8.0-apache-alpine
+FROM webdevops/php-apache:8.0-alpine
 
 ENV TZ=Asia/Jakarta
 
