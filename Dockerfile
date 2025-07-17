@@ -6,7 +6,7 @@ WORKDIR /var/www/html
 
 COPY . .
 
-RUN chown -R root:root . && chmod -R 755 .
+RUN chown -R www-data:www-data . && chmod -R 755 .
 
 RUN apk add --no-cache tzdata && ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
 
