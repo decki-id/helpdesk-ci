@@ -350,8 +350,8 @@
             $this->email->to('herdiawand@yahoo.co.id');
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
-                Ada seorang pelanggan telah membuat permintaan bantuan baru! Ayo dicek!<br>
-                <a href="'. base_url() .'">Buka portal</a>
+                A new ticket has been assigned!<br>!<br>
+                <a href="'. base_url() .'">Open portal</a>
             ');
             
             if ($this->email->send()) {
@@ -380,8 +380,8 @@
             $this->email->to('eduramdhanaputra@yahoo.com');
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
-                Ada seorang pelanggan telah membuat permintaan bantuan baru! Ayo dicek!<br>
-                <a href="'. base_url() .'">Buka portal</a>
+                A new ticket has been assigned!<br>!<br>
+                <a href="'. base_url() .'">Open portal</a>
             ');
 
             if ($this->email->send()) {
@@ -410,8 +410,8 @@
             $this->email->to('triuntungsutriyanto@yahoo.com');
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
-                Ada seorang pelanggan telah membuat permintaan bantuan baru! Ayo dicek!<br>
-                <a href="'. base_url() .'">Buka portal</a>
+                A new ticket has been assigned!<br>!<br>
+                <a href="'. base_url() .'">Open portal</a>
             ');
 
             if ($this->email->send()) {
@@ -440,9 +440,8 @@
             $this->email->to($this->input->post('contact_email'));
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
-                Permintaan bantuan anda sudah selesai dikerjakan, silakan periksa kembali.<br>
-                Terima kasih telah menggunakan Decki ID.<br>
-                <a href="'. base_url() .'">Buka portal</a>
+                Your support request is done. Thank you for using Decki ID.<br>
+                <a href="'. base_url() .'">Open portal</a>
             ');
             
             if ($this->email->send()) {
@@ -557,14 +556,14 @@
             $this->email->to($this->input->post('email'));
             $this->email->subject('Decki ID Account Verification');
             $this->email->message('
-                Terima kasih telah menggunakan Decki ID.<br>
-                Silakan klik tautan di bawah ini untuk mengaktifkan akun bantuan pelanggan anda dengan username dan password berikut.<br>
+                Thank you for using Decki ID.<br>
+                Please click the link below to activate your account using the following username and password.<br>
+                <a href="'. base_url() . 'auth/verify?username=' . $this->input->post('username') . '&token=' . urlencode($token) .'">
+                Activate account
+                </a><br>
                 Username: ' . $this->input->post('username') . '<br>
                 Password: ' . $this->input->post('password') . '<br>
-                Mohon segera perbarui username dan password anda setelah berhasil melakukan login pertama.<br>
-                <a href="'. base_url() . 'auth/verify?username=' . $this->input->post('username') . '&token=' . urlencode($token) .'">
-                Aktifkan akun
-                </a>
+                Please change your username and password after the initial login.
             ');
 
             if ($this->email->send()) {
