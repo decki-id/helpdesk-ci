@@ -2,11 +2,11 @@ FROM webdevops/php-apache:8.0-alpine
 
 ENV TZ=Asia/Jakarta
 
-WORKDIR /var/www/html
+WORKDIR /var/www/localhost/htdocs
 
 COPY . .
 
-RUN chown -R apache:apache . && chmod -R 755 .
+RUN chown -R root:root . && chmod -R 755 .
 
 RUN apk add --no-cache tzdata && ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
 
@@ -14,7 +14,7 @@ RUN \
 echo "ServerName localhost" >> /etc/apache2/httpd.conf && \
 echo "LoadModule rewrite_module modules/mod_rewrite.so" >> /etc/apache2/httpd.conf && \
 sed -i 's|AllowOverride None|AllowOverride All|g' /etc/apache2/httpd.conf && \
-sed -i 's|/var/www/localhost/htdocs|/var/www/html|g' /etc/apache2/httpd.conf && \
+# sed -i 's|/var/www/localhost/htdocs|/var/www/html|g' /etc/apache2/httpd.conf && \
 sed -i 's|DirectoryIndex index.html|DirectoryIndex index.php index.html|g' /etc/apache2/httpd.conf
 
 EXPOSE 80
