@@ -1,5 +1,7 @@
 .DS_Store
+user_guide
 composer.lock
+/index.php
 config.php
 database.php
 Auth.php
@@ -16,7 +18,6 @@ user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
-/vendor/
 
 # IDE Files
 #-------------------------
