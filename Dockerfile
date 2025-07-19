@@ -4,7 +4,7 @@ ENV TZ=Asia/Jakarta
 
 WORKDIR /var/www/localhost/htdocs
 
-COPY --chown root:root . .
+COPY --chown=root:root . .
 
 RUN chmod -R 755 .
 
