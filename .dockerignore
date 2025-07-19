@@ -1,4 +1,5 @@
 .git
 .gitignore
+.dockerignore
 *.example
 user_guide
