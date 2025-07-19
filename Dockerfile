@@ -4,9 +4,9 @@ ENV TZ=Asia/Jakarta
 
 WORKDIR /var/www/localhost/htdocs
 
-COPY . .
+COPY --chown root:root . .
 
-RUN chown -R root:root . && chmod -R 755 .
+RUN chmod -R 755 .
 
 RUN apk add --no-cache tzdata && ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
 
