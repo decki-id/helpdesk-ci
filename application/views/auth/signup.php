@@ -53,7 +53,7 @@
 				</div>
 				<hr>
 				<div class="container px-5 pb-2">
-					<form method="post" action="<?= base_url('auth/signup/'); ?>">
+					<?= form_open_multipart('auth/signup/'); ?>
             <div class="form-group row px-md-first-mod">
               <label for="name" class="col-md-4 col-form-label l-pt-md-mod">Full Name</label>
               <div class="col-md-8 agent-field-custom">

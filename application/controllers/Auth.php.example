@@ -55,6 +55,8 @@
                             redirect('agent/');
                         } elseif ($this->session->userdata('role_id') == 2) {
                             redirect('staff/');
+                        } elseif ($this->session->userdata('role_id') == 3) {
+                            redirect('client/');
                         }
                     } else {
                         $this->session->set_flashdata('flash', 'Wrong password!');
@@ -110,7 +112,7 @@
             $this->form_validation->set_rules('email', 'email', 'required|trim|valid_email');
             $this->form_validation->set_rules('username', 'username', 'required|trim|alpha_numeric|regex_match[/^[^\s]*$/]');
             $this->form_validation->set_rules('password', 'password', 'required|trim|min_length[5]');
-            $this->form_validation->set_rules('image', 'image', 'required|trim');
+            // $this->form_validation->set_rules('image', 'image', 'required|trim');
             $this->form_validation->set_rules('role_id', 'role_id', 'required|trim');
 
             if ($this->form_validation->run() == false) {
@@ -213,7 +215,7 @@
         private function sendEmailForgotPassword($token) {
             $config = [
                 "protocol" => "smtp",
-                "smtp_host" => "smtp.gmail.com",
+                "smtp_host" => "",
                 "smtp_user" => "",
                 "smtp_pass" => "",
                 "smtp_port" => 587,

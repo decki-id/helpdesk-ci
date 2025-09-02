@@ -335,7 +335,7 @@
         private function sendEmailNotificationAgent() {
             $config = [
                 "protocol" =>"smtp",
-                "smtp_host" => "smtp.gmail.com",
+                "smtp_host" => "",
                 "smtp_user" => "",
                 "smtp_pass" => "",
                 "smtp_port" => 587,
@@ -346,7 +346,7 @@
             ];
 
             $this->email->initialize($config);
-            $this->email->from('d.herdiawan.s@gmail.com', 'Decki ID');
+            $this->email->from('mail@decki.id', 'Decki ID');
             $this->email->to('herdiawand@yahoo.co.id');
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
@@ -365,7 +365,7 @@
         private function sendEmailNotificationAgent1() {
             $config = [
                 "protocol" =>"smtp",
-                "smtp_host" => "smtp.gmail.com",
+                "smtp_host" => "",
                 "smtp_user" => "",
                 "smtp_pass" => "",
                 "smtp_port" => 587,
@@ -376,7 +376,7 @@
             ];
 
             $this->email->initialize($config);
-            $this->email->from('d.herdiawan.s@gmail.com', 'Decki ID');
+            $this->email->from('mail@decki.id', 'Decki ID');
             $this->email->to('eduramdhanaputra@yahoo.com');
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
@@ -395,7 +395,7 @@
         private function sendEmailNotificationAgent2() {
             $config = [
                 "protocol" =>"smtp",
-                "smtp_host" => "smtp.gmail.com",
+                "smtp_host" => "",
                 "smtp_user" => "",
                 "smtp_pass" => "",
                 "smtp_port" => 587,
@@ -406,7 +406,7 @@
             ];
 
             $this->email->initialize($config);
-            $this->email->from('d.herdiawan.s@gmail.com', 'Decki ID');
+            $this->email->from('mail@decki.id', 'Decki ID');
             $this->email->to('triuntungsutriyanto@yahoo.com');
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
@@ -425,7 +425,7 @@
         private function sendEmailNotificationClient() {
             $config = [
                 "protocol" =>"smtp",
-                "smtp_host" => "smtp.gmail.com",
+                "smtp_host" => "",
                 "smtp_user" => "",
                 "smtp_pass" => "",
                 "smtp_port" => 587,
@@ -436,7 +436,7 @@
             ];
 
             $this->email->initialize($config);
-            $this->email->from('d.herdiawan.s@gmail.com', 'Decki ID');
+            $this->email->from('mail@decki.id', 'Decki ID');
             $this->email->to($this->input->post('contact_email'));
             $this->email->subject('Decki ID Support Notification');
             $this->email->message('
@@ -541,7 +541,7 @@
         private function sendEmailVerifyContact($token) {
             $config = [
                 "protocol" =>"smtp",
-                "smtp_host" => "smtp.gmail.com",
+                "smtp_host" => "",
                 "smtp_user" => "",
                 "smtp_pass" => "",
                 "smtp_port" => 587,
@@ -552,7 +552,7 @@
             ];
 
             $this->email->initialize($config);
-            $this->email->from('d.herdiawan.s@gmail.com', 'Decki ID');
+            $this->email->from('mail@decki.id', 'Decki ID');
             $this->email->to($this->input->post('email'));
             $this->email->subject('Decki ID Account Verification');
             $this->email->message('
@@ -794,7 +794,7 @@
         private function sendEmailVerifyAgent($token) {
             $config = [
                 "protocol" =>"smtp",
-                "smtp_host" => "smtp.gmail.com",
+                "smtp_host" => "",
                 "smtp_user" => "",
                 "smtp_pass" => "",
                 "smtp_port" => 587,
@@ -805,12 +805,12 @@
             ];
             
             $this->email->initialize($config);
-            $this->email->from('d.herdiawan.s@gmail.com', 'Decki ID');
+            $this->email->from('mail@decki.id', 'Decki ID');
             $this->email->to($this->input->post('email'));
             $this->email->subject('Decki ID Account Verification');
             $this->email->message('
                 Selamat datang di Decki ID.<br>
-                Silakan klik tautan di bawah ini untuk mengaktifkan akun anda dengan username dan password berikut dan mulai bekerja.<br>
+                Silakan klik tautan di bawah ini untuk mengaktifkan akun anda dengan username dan password berikut.<br>
                 Username: ' . $this->input->post('username') . '<br>
                 Password: ' . $this->input->post('password') . '<br>
                 Mohon segera perbarui username dan password anda setelah berhasil melakukan login pertama.<br>
