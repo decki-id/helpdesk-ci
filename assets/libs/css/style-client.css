@@ -5069,6 +5069,15 @@ Custom Style by Decki
 	z-index: 1;
 }
 
+.period {
+	width: 58px;
+	justify-content: center;
+}
+
+.period-x {
+	width: 42px;
+}
+
 .detail-box {
 	position: relative;
 	background-color: #d1ecf1;

@@ -57,9 +57,12 @@
         <div class="form-group">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="from">From</span>
+                    <span class="input-group-text period" id="from">From</span>
                 </div>
                 <input type="date" class="form-control" id="from" name="from">
+                <div class="input-group-append">
+                    <span class="input-group-text period-x">&#65279;</span>
+                </div>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
