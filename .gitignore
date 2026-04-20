@@ -1,6 +1,5 @@
 .DS_Store
 user_guide
-composer.lock
 /index.php
 config.php
 database.php
